@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"> 
+  <changeSet author="udin" id="branch-1.0">
+    <createTable tableName="BRANCH">
+      <column name="ID" type="VARCHAR(10)">
+        <constraints primaryKey="true" unique="false"/>
+      </column>
+      <column name="NAME" type="VARCHAR(100)"/>
+      <column name="LAVEL" type="INT"/>
+      <column name="PARENT_NAME" type="VARCHAR(100)"/>
+      <column name="PARENT_ID" type="VARCHAR(100)"/>
+      <column name="TIMEZONE" type="DATE"/>
+      <column name="EHOME_ID" type="DATE"/>
+      <column name="LAST_ACTIVE" type="BOOLEAN"/>
+    </createTable>
+    
+  </changeSet>
+  <changeSet author="udin" id="branch-1.0.1">
+    <modifyDataType 
+            columnName="TIMEZONE"
+            newDataType="VARCHAR(100)"
+            tableName="BRANCH"/>
+</changeSet>
+<changeSet author="udin" id="branch-1.0.2">
+    <modifyDataType 
+            columnName="EHOME_ID"
+            newDataType="VARCHAR(100)"
+            tableName="BRANCH"/>
+</changeSet>
+
+</databaseChangeLog> 

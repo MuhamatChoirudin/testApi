@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd"> 
+  <changeSet author="udin" id="employee-1.0">
+    <createTable tableName="EMPLOYEE">
+      <column name="ID" type="VARCHAR(10)">
+        <constraints primaryKey="true" unique="false"/>
+      </column>
+      <column name="NAME" type="VARCHAR(100)"/>
+      <column name="NUMBER" type="VARCHAR(100)"/>
+      <column name="BIOMETRIC_NUMBER" type="VARCHAR(100)"/>
+      <column name="TITEL" type="VARCHAR(100)"/>
+      <column name="WORK_START" type="DATE"/>
+      <column name="WORK_END" type="DATE"/>
+      <column name="WORK_END_REASON" type="VARCHAR(100)"/>
+      <column name="BASE_SALARY_IDX" type="INT"/>
+      <column name="BASE_SALARY" type="INT"/>
+      <column name="DAILY_SALARY" type="INT"/>
+      <column name="BPJS_SALARY" type="INT"/>
+      <column name="MEAL_EXTRA" type="INT"/>
+      <column name="TITLE_EXTRA" type="INT"/>
+      <column name="JST_EXTRA" type="INT"/>
+      <column name="BPJS_EXTRA" type="INT"/>
+      <column name="INCENTIVE_EXTRA" type="INT"/>
+      <column name="MISC_EXTRA" type="INT"/>
+      <column name="MEAL_CHARGE" type="INT"/>
+      <column name="JST_CHARGE" type="INT"/>
+      <column name="BPJS_CHARGE" type="INT"/>
+      <column name="FINE_CHARGE" type="INT"/>
+      <column name="LOAN_CHARGE" type="INT"/>
+      <column name="MISC_CHARGE" type="INT"/>
+      <column name="BANK_ACCOUNT_NUMBER" type="VARCHAR(100)"/>
+      <column name="BANK_ACCOUNT_NAME" type="VARCHAR(100)"/>
+      <column name="NIK" type="VARCHAR(30)"/>
+      <column name="ADDRESS" type="VARCHAR(100)"/>
+      <column name="ROLE" type="INT"/>
+      <column name="ACTIVE" type="BOOLEAN"/>
+      <column name="BRANCH" type="VARCHAR(10)"/>
+      <column name="BRANCH_ID" type="VARCHAR(10)"/>
+      
+    </createTable>
+    
+  </changeSet>
+
+</databaseChangeLog> 
